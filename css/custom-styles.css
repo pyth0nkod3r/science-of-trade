@@ -2027,100 +2027,70 @@ body {
 
 /* Partner/Advertise CTA Section */
 .partner-cta {
-    padding: 8rem 2rem;
-    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-        url('../assets/partner-bg.jpg') center/cover fixed;
-    position: relative;
+    background-image: url('../assets/logo/PARTNER IMAGE.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #000;
+    /* Adding a dark background color to fill empty space */
+    padding: 6rem 2rem;
     text-align: center;
+    position: relative;
+}
+
+.partner-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 .partner-content {
-    max-width: 1200px;
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.partner-cta h2 {
-    font-size: 3.5rem;
+.partner-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
     color: #fff;
-    margin-bottom: 3rem;
-    line-height: 1.2;
-    font-weight: bold;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .partner-btn {
     display: inline-block;
-    padding: 1.2rem 3rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
+    padding: 1rem 2.5rem;
+    background: var(--primary-orange);
     color: #fff;
-    background: transparent;
-    border: 2px solid #fff;
-    border-radius: 5px;
     text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
     transition: all 0.3s ease;
-    letter-spacing: 1px;
 }
 
 .partner-btn:hover {
     background: #fff;
-    color: #000;
+    color: var(--primary-orange);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(254, 154, 35, 0.3);
 }
 
-/* Responsive Design for Partner CTA Section */
-@media (max-width: 992px) {
-    .partner-cta h2 {
-        font-size: 3rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .partner-cta {
-        padding: 6rem 2rem;
-    }
-
-    .partner-cta h2 {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-    }
-
-    .partner-btn {
-        padding: 1rem 2.5rem;
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 576px) {
-    .partner-cta {
-        padding: 4rem 1.5rem;
-    }
-
-    .partner-cta h2 {
-        font-size: 2rem;
-    }
-
-    .partner-btn {
-        padding: 0.8rem 2rem;
-        font-size: 1rem;
-    }
-}
+/* ... existing code ... */
 
 /* Diamond Partners Section */
 .diamond-partners {
     padding: 6rem 2rem;
-    background-color: #fff;
+    background-color: #000;
     position: relative;
 }
 
-.diamond-partners .section-header {
-    margin-bottom: 4rem;
-}
-
 .diamond-partners .section-header h2 {
-    color: #000;
+    color: #fff;
 }
 
 .partners-grid {
@@ -2222,16 +2192,12 @@ body {
 /* Supporting Partners Section */
 .supporting-partners {
     padding: 6rem 2rem;
-    background-color: #f8f9fa;
+    background-color: rgba(0, 0, 0, 0.95);
     position: relative;
 }
 
-.supporting-partners .section-header {
-    margin-bottom: 4rem;
-}
-
 .supporting-partners .section-header h2 {
-    color: #000;
+    color: #fff;
 }
 
 .supporting-partners .partners-grid {
@@ -2256,9 +2222,7 @@ body {
     padding: 1.5rem;
     transition: all 0.3s ease;
     position: relative;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .supporting-partners .partner-logo img {
@@ -2340,16 +2304,12 @@ body {
 /* Exhibitors Section */
 .exhibitors {
     padding: 6rem 2rem;
-    background: linear-gradient(to bottom, #f8f9fa, #fff);
+    background: linear-gradient(to bottom, rgba(93, 1, 206, 0.1), #000);
     position: relative;
 }
 
-.exhibitors .section-header {
-    margin-bottom: 4rem;
-}
-
 .exhibitors .section-header h2 {
-    color: #000;
+    color: #fff;
 }
 
 .exhibitors .partners-grid {
@@ -2374,9 +2334,7 @@ body {
     padding: 1.5rem;
     transition: all 0.3s ease;
     position: relative;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .exhibitors .partner-logo img {
@@ -2475,16 +2433,12 @@ body {
 /* Media Partners Section */
 .media-partners {
     padding: 6rem 2rem;
-    background: linear-gradient(to bottom, #f8f9fa, #fff);
+    background: linear-gradient(to bottom, #000, rgba(93, 1, 206, 0.1));
     position: relative;
 }
 
-.media-partners .section-header {
-    margin-bottom: 4rem;
-}
-
 .media-partners .section-header h2 {
-    color: #000;
+    color: #fff;
 }
 
 .media-partners .partners-grid {
@@ -2515,9 +2469,7 @@ body {
     padding: 1.5rem;
     transition: all 0.3s ease;
     position: relative;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .media-partners .partner-logo img {
@@ -3505,16 +3457,12 @@ body {
 /* 2024 Sponsors Section */
 .sponsors-2024 {
     padding: 6rem 2rem;
-    background: linear-gradient(to bottom, #fff, #f8f9fa);
+    background: linear-gradient(to bottom, #000, rgba(93, 1, 206, 0.1));
     position: relative;
 }
 
-.sponsors-2024 .section-header {
-    margin-bottom: 4rem;
-}
-
-.sponsors-2024 .section-header h2::after {
-    background: linear-gradient(to right, var(--primary-orange), var(--primary-red));
+.sponsors-2024 .section-header h2 {
+    color: #fff;
 }
 
 .sponsors-2024 .partners-grid {
@@ -3528,21 +3476,12 @@ body {
 /* 2024 Media Partners Section */
 .media-partners-2024 {
     padding: 6rem 2rem;
-    background: linear-gradient(to bottom, #f8f9fa, #fff);
+    background: linear-gradient(to bottom, rgba(93, 1, 206, 0.1), #000);
     position: relative;
-}
-
-.media-partners-2024 .section-header {
-    margin-bottom: 4rem;
 }
 
 .media-partners-2024 .section-header h2 {
-    color: #000;
-    position: relative;
-}
-
-.media-partners-2024 .section-header h2::after {
-    background: linear-gradient(to right, var(--primary-red), var(--primary-purple));
+    color: #fff;
 }
 
 .media-partners-2024 .partners-grid {
@@ -3552,6 +3491,135 @@ body {
     flex-direction: column;
     gap: 3rem;
 }
+
+.media-partners-2024 .partner-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.media-partners-2024 .partner-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.media-partners-2024 .partner-logo img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+    opacity: 0.75;
+}
+
+.media-partners-2024 .partner-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.media-partners-2024 .partner-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Responsive Design for 2024 Media Partners */
+@media (max-width: 1200px) {
+    .media-partners-2024 .partner-row {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .media-partners-2024 .partner-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .media-partners-2024 {
+        padding: 4rem 1.5rem;
+    }
+
+    .media-partners-2024 .partner-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .media-partners-2024 .partner-row {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .media-partners-2024 .partner-logo {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+}
+
+/* 2024 Exhibitors Section */
+.exhibitors-2024 {
+    padding: 6rem 2rem;
+    background: linear-gradient(to bottom, rgba(93, 1, 206, 0.1), #000);
+    position: relative;
+}
+
+.exhibitors-2024 .section-header h2 {
+    color: #fff;
+}
+
+.exhibitors-2024 .partners-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.exhibitors-2024 .partner-row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    align-items: center;
+}
+
+.exhibitors-2024 .partner-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+}
+
+.exhibitors-2024 .partner-logo img {
+    max-width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+    opacity: 0.75;
+}
+
+.exhibitors-2024 .partner-logo:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.exhibitors-2024 .partner-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* ... existing code ... */
 
 /* Page Header Styles */
 .page-header {
@@ -3788,3 +3856,29 @@ body {
 .speaker-ojei-joseph {
     background-image: url('../assets/speakers/2024/ojei-joseph.jpg');
 }
+
+.media-partners-2024 .partner-logo.placeholder {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* ... existing code ... */
+
+.media-partners-2024 .partner-logo.placeholder {
+    display: none;
+    /* This completely removes the element from layout */
+}
+
+/* Ensure hover effects don't apply to placeholders */
+.media-partners-2024 .partner-logo.placeholder:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.media-partners-2024 .partner-logo.placeholder:hover img {
+    filter: none;
+    opacity: 0;
+}
+
+/* ... existing code ... */
