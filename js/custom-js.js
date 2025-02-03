@@ -129,3 +129,79 @@ document.querySelector('.watch-btn').addEventListener('click', function() {
     // For example, open a modal with the video
     alert('Video highlights coming soon!');
 });
+
+// Footer Gallery Image Rotation
+const footerGalleryImages = [
+    'Copy of 5H8A9984.JPG',
+    'Copy of DIB20505.JPG',
+    'Copy of DIB20513.JPG',
+    'Copy of DIB20516.JPG',
+    'Copy of DIB20542.JPG',
+    'Copy of DIB20863.JPG',
+    'Copy of DIB21026.JPG',
+    'Copy of IMG_1159-2.JPG',
+    'Copy of IMG_1441.jpg',
+    'Copy of IMG_1494.jpg',
+    'Copy of IMG_2283.JPG',
+    'Copy of IMG_9078.jpg',
+    'Copy of IMG_9207.jpg',
+    'SOT 1.png',
+    'SOT 2.png',
+    'SOT 3.png',
+    'SOT 4.png',
+    'SOT 5.png',
+    'SOT 6.png',
+    'SOT 7.png',
+    'SOT 8.jpg',
+    'SOT 9.jpg',
+    'SOT.png',
+    'SOT3.png',
+    'SOT6.png',
+    'SOTC.png',
+    'ABC.png',
+    'KEA.jpg'
+];
+
+function shuffleArray(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+}
+
+function updateFooterGallery() {
+    const footerGalleryGrids = document.querySelectorAll('.footer-gallery .gallery-grid');
+    
+    footerGalleryGrids.forEach(grid => {
+        const images = grid.querySelectorAll('img');
+        const shuffledImages = shuffleArray([...footerGalleryImages]);
+        
+        images.forEach((img, index) => {
+            const fadeOut = () => {
+                img.style.opacity = '0';
+                setTimeout(() => {
+                    // Check if we're in the root directory or a subdirectory
+                    const basePath = img.src.includes('/pages/') ? '../' : '';
+                    img.src = `${basePath}assets/gallery/${shuffledImages[index]}`;
+                    img.style.opacity = '1';
+                }, 500);
+            };
+            
+            fadeOut();
+        });
+    });
+}
+
+// Initial shuffle
+document.addEventListener('DOMContentLoaded', () => {
+    // Add transition style to footer gallery images
+    const footerGalleryImages = document.querySelectorAll('.footer-gallery .gallery-grid img');
+    footerGalleryImages.forEach(img => {
+        img.style.transition = 'opacity 0.5s ease';
+    });
+    
+    updateFooterGallery();
+    // Update gallery every 10 seconds
+    setInterval(updateFooterGallery, 10000);
+});
